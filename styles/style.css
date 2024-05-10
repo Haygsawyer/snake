@@ -1,0 +1,42 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #4CAF50; /* Green background color */
+    overflow: hidden; /* Hide overflow content */
+}
+
+.nav-links {
+    list-style-type: none; /* Remove default list style */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    float: left; /* Float list items horizontally */
+}
+
+.nav-links li a {
+    display: block; /* Display links as block elements */
+    color: white; /* Text color */
+    text-align: center; /* Center align text */
+    padding: 14px 16px; /* Add padding */
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-links li a:hover {
+    background-color: #ddd; /* Add hover background color */
+    color: black; /* Change text color on hover */
+}
+
+/* Responsive navigation */
+@media screen and (max-width: 600px) {
+    .nav-links li {
+        float: none; /* Change to vertical layout */
+    }
+}
