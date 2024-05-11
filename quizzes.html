@@ -23,11 +23,12 @@
     <!-- Main Content -->
     <div class="container">
         <h1>Quizzes</h1>
-        <!-- Quiz 1 -->
+
+        <!-- Quiz 1: Injection Vulnerabilities -->
         <div class="quiz">
             <h2>Quiz 1: Injection Vulnerabilities</h2>
             <p>What is an example of an injection vulnerability?</p>
-            <form action="">
+            <form id="quiz1">
                 <input type="radio" id="q1a1" name="q1" value="q1a1">
                 <label for="q1a1">A) SQL Injection</label><br>
                 <input type="radio" id="q1a2" name="q1" value="q1a2">
@@ -37,13 +38,14 @@
                 <input type="radio" id="q1a4" name="q1" value="q1a4">
                 <label for="q1a4">D) Cross-Site Request Forgery (CSRF)</label><br>
             </form>
+            <p id="quiz1-feedback"></p>
         </div>
 
-        <!-- Quiz 2 -->
+        <!-- Quiz 2: Password Attacks -->
         <div class="quiz">
             <h2>Quiz 2: Password Attacks</h2>
             <p>Which of the following is NOT a password attack?</p>
-            <form action="">
+            <form id="quiz2">
                 <input type="radio" id="q2a1" name="q2" value="q2a1">
                 <label for="q2a1">A) Brute Force Attack</label><br>
                 <input type="radio" id="q2a2" name="q2" value="q2a2">
@@ -53,24 +55,39 @@
                 <input type="radio" id="q2a4" name="q2" value="q2a4">
                 <label for="q2a4">D) Phishing Attack</label><br>
             </form>
+            <p id="quiz2-feedback"></p>
         </div>
 
-        <!-- Quiz 3 -->
-        <div class="quiz">
-            <h2>Quiz 3: Server-Side Request Forgery (SSRF)</h2>
-            <p>What is SSRF?</p>
-            <form action="">
-                <input type="radio" id="q3a1" name="q3" value="q3a1">
-                <label for="q3a1">A) A type of SQL injection vulnerability</label><br>
-                <input type="radio" id="q3a2" name="q3" value="q3a2">
-                <label for="q3a2">B) A technique to manipulate client-side scripts</label><br>
-                <input type="radio" id="q3a3" name="q3" value="q3a3">
-                <label for="q3a3">C) A security vulnerability that allows attackers to induce the server to perform actions on behalf of the attacker</label><br>
-                <input type="radio" id="q3a4" name="q3" value="q3a4">
-                <label for="q3a4">D) A method for intercepting and modifying data sent between two systems</label><br>
-            </form>
-        </div>
+        <!-- Add more quizzes as needed -->
+
     </div>
+
+    <script>
+        // Quiz 1: Injection Vulnerabilities
+        document.getElementById('quiz1').addEventListener('change', function() {
+            const selectedAnswer = document.querySelector('input[name="q1"]:checked').value;
+            const feedback = document.getElementById('quiz1-feedback');
+            if (selectedAnswer === 'q1a1') {
+                feedback.textContent = 'Correct! SQL Injection is an example of an injection vulnerability.';
+            } else {
+                feedback.textContent = 'Incorrect. SQL Injection is an example of an injection vulnerability.';
+            }
+        });
+
+        // Quiz 2: Password Attacks
+        document.getElementById('quiz2').addEventListener('change', function() {
+            const selectedAnswer = document.querySelector('input[name="q2"]:checked').value;
+            const feedback = document.getElementById('quiz2-feedback');
+            if (selectedAnswer === 'q2a3') {
+                feedback.textContent = 'Correct! Denial-of-Service (DoS) Attack is not a password attack.';
+            } else {
+                feedback.textContent = 'Incorrect. Denial-of-Service (DoS) Attack is not a password attack.';
+            }
+        });
+
+        // Add event listeners and feedback for other quizzes as needed
+
+    </script>
 </body>
 
 </html>
