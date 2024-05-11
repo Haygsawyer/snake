@@ -21,12 +21,55 @@
     </nav>
 
     <!-- Main Content -->
-    <div id="quizzes">
+    <div class="container">
         <h1>Quizzes</h1>
-        <!-- Insert quiz content here -->
-        <p>Quiz 1: Injection Vulnerabilities</p>
-        <p>Quiz 2: Password Attacks</p>
-        <p>Quiz 3: Server-side Request Forgery (SSRF)</p>
+        <!-- Quiz 1 -->
+        <div class="quiz">
+            <h2>Quiz 1: Injection Vulnerabilities</h2>
+            <p>What is an example of an injection vulnerability?</p>
+            <form action="">
+                <input type="radio" id="q1a1" name="q1" value="q1a1">
+                <label for="q1a1">A) SQL Injection</label><br>
+                <input type="radio" id="q1a2" name="q1" value="q1a2">
+                <label for="q1a2">B) Cross-Site Scripting (XSS)</label><br>
+                <input type="radio" id="q1a3" name="q1" value="q1a3">
+                <label for="q1a3">C) Clickjacking</label><br>
+                <input type="radio" id="q1a4" name="q1" value="q1a4">
+                <label for="q1a4">D) Cross-Site Request Forgery (CSRF)</label><br>
+            </form>
+        </div>
+
+        <!-- Quiz 2 -->
+        <div class="quiz">
+            <h2>Quiz 2: Password Attacks</h2>
+            <p>Which of the following is NOT a password attack?</p>
+            <form action="">
+                <input type="radio" id="q2a1" name="q2" value="q2a1">
+                <label for="q2a1">A) Brute Force Attack</label><br>
+                <input type="radio" id="q2a2" name="q2" value="q2a2">
+                <label for="q2a2">B) Dictionary Attack</label><br>
+                <input type="radio" id="q2a3" name="q2" value="q2a3">
+                <label for="q2a3">C) Denial-of-Service (DoS) Attack</label><br>
+                <input type="radio" id="q2a4" name="q2" value="q2a4">
+                <label for="q2a4">D) Phishing Attack</label><br>
+            </form>
+        </div>
+
+        <!-- Quiz 3 -->
+        <div class="quiz">
+            <h2>Quiz 3: Server-Side Request Forgery (SSRF)</h2>
+            <p>What is SSRF?</p>
+            <form action="">
+                <input type="radio" id="q3a1" name="q3" value="q3a1">
+                <label for="q3a1">A) A type of SQL injection vulnerability</label><br>
+                <input type="radio" id="q3a2" name="q3" value="q3a2">
+                <label for="q3a2">B) A technique to manipulate client-side scripts</label><br>
+                <input type="radio" id="q3a3" name="q3" value="q3a3">
+                <label for="q3a3">C) A security vulnerability that allows attackers to induce the server to perform actions on behalf of the attacker</label><br>
+                <input type="radio" id="q3a4" name="q3" value="q3a4">
+                <label for="q3a4">D) A method for intercepting and modifying data sent between two systems</label><br>
+            </form>
+        </div>
     </div>
 </body>
 
