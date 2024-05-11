@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BugBusters - Home</title>
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BugBusters</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">BugBusters!</div>
+         <nav class="navbar">
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About BugBusters</a></li>
@@ -19,17 +18,24 @@
             <li><a href="game.html">Play Bug Match Game</a></li>
         </ul>
     </nav>
-
-    <!-- Main Content -->
-    <div id="home">
-        <h1>Welcome to my project</h1>
-        <p>This website aims to educate at an elementary level the principles of website insecurities and spark interest in bug bounty as a side hustle.</p>
-
-        <p>Thing's have been a mess so far, but at least it's my mess and I tried :D</p>
-        <img src="images/fine.png" alt="Fine">
-    </div>
-
-    <script src="scripts/script.js"></script>
-</body>
-
+    <section class="hero">
+      <div class="hero-container">
+        <div class="column-left">
+          <h1>Learn a Skill!</h1>
+          <p>
+            No gimmicks, just fun free learning! Unleash your inner detective
+            today!
+          </p>
+          <a href="basics.html"><button>Get started!</button></a>
+        </div>
+        <div class="column-right">
+          <img
+            src="images/fine.png"
+            alt="illustration"
+            class="hero-image"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
