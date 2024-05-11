@@ -23,69 +23,96 @@
     <!-- Main Content -->
     <div class="container">
         <h1>Quizzes</h1>
+        
+<!-- Question 1-->
+<div class="quiz">
+    <h2>Question 1</h2>
+    <p>What is phishing?</p>
+    <form id="quiz1">
+        <input type="radio" id="q1a1" name="q1" value="q1a1">
+        <label for="q1a1">A) Social engineering attack to steal sensitive information</label><br>
+        <input type="radio" id="q1a2" name="q1" value="q1a2">
+        <label for="q1a2">B) Denial-of-Service (DoS) attack</label><br>
+        <input type="radio" id="q1a3" name="q1" value="q1a3">
+        <label for="q1a3">C) Network intrusion attack</label><br>
+        <input type="radio" id="q1a4" name="q1" value="q1a4">
+        <label for="q1a4">D) Server misconfiguration</label><br>
+    </form>
+    <p id="quiz1-feedback"></p>
+</div>
 
-        <!-- Quiz 1: Injection Vulnerabilities -->
-        <div class="quiz">
-            <h2>Quiz 1: Injection Vulnerabilities</h2>
-            <p>What is an example of an injection vulnerability?</p>
-            <form id="quiz1">
-                <input type="radio" id="q1a1" name="q1" value="q1a1">
-                <label for="q1a1">A) SQL Injection</label><br>
-                <input type="radio" id="q1a2" name="q1" value="q1a2">
-                <label for="q1a2">B) Cross-Site Scripting (XSS)</label><br>
-                <input type="radio" id="q1a3" name="q1" value="q1a3">
-                <label for="q1a3">C) Clickjacking</label><br>
-                <input type="radio" id="q1a4" name="q1" value="q1a4">
-                <label for="q1a4">D) Cross-Site Request Forgery (CSRF)</label><br>
-            </form>
-            <p id="quiz1-feedback"></p>
-        </div>
+<!-- Quiz 2: What is Encryption? -->
+<div class="quiz">
+    <h2>Question 2</h2>
+    <p>What is encryption?</p>
+    <form id="quiz2">
+        <input type="radio" id="q2a1" name="q2" value="q2a1">
+        <label for="q2a1">A) The process of converting plaintext into ciphertext</label><br>
+        <input type="radio" id="q2a2" name="q2" value="q2a2">
+        <label for="q2a2">B) The process of decoding ciphertext into plaintext</label><br>
+        <input type="radio" id="q2a3" name="q2" value="q2a3">
+        <label for="q2a3">C) A type of malware</label><br>
+        <input type="radio" id="q2a4" name="q2" value="q2a4">
+        <label for="q2a4">D) A hardware firewall</label><br>
+    </form>
+    <p id="quiz2-feedback"></p>
+</div>
 
-        <!-- Quiz 2: Password Attacks -->
-        <div class="quiz">
-            <h2>Quiz 2: Password Attacks</h2>
-            <p>Which of the following is NOT a password attack?</p>
-            <form id="quiz2">
-                <input type="radio" id="q2a1" name="q2" value="q2a1">
-                <label for="q2a1">A) Brute Force Attack</label><br>
-                <input type="radio" id="q2a2" name="q2" value="q2a2">
-                <label for="q2a2">B) Dictionary Attack</label><br>
-                <input type="radio" id="q2a3" name="q2" value="q2a3">
-                <label for="q2a3">C) Denial-of-Service (DoS) Attack</label><br>
-                <input type="radio" id="q2a4" name="q2" value="q2a4">
-                <label for="q2a4">D) Phishing Attack</label><br>
-            </form>
-            <p id="quiz2-feedback"></p>
-        </div>
+<!-- Quiz 3: What is Two-Factor Authentication (2FA)? -->
+<div class="quiz">
+    <h2>Question 3: What is Two-Factor Authentication (2FA)?</h2>
+    <p>What is Two-Factor Authentication (2FA)?</p>
+    <form id="quiz3">
+        <input type="radio" id="q3a1" name="q3" value="q3a1">
+        <label for="q3a1">A) Authentication using two passwords</label><br>
+        <input type="radio" id="q3a2" name="q3" value="q3a2">
+        <label for="q3a2">B) Authentication using two different authentication methods</label><br>
+        <input type="radio" id="q3a3" name="q3" value="q3a3">
+        <label for="q3a3">C) A type of phishing attack</label><br>
+        <input type="radio" id="q3a4" name="q3" value="q3a4">
+        <label for="q3a4">D) A network intrusion technique</label><br>
+    </form>
+    <p id="quiz3-feedback"></p>
+</div>
 
-        <!-- Add more quizzes as needed -->
 
-    </div>
+<script>
+    // Quiz 1: What is Phishing?
+    document.getElementById('quiz1').addEventListener('change', function() {
+        const selectedAnswer = document.querySelector('input[name="q1"]:checked').value;
+        const feedback = document.getElementById('quiz1-feedback');
+        if (selectedAnswer === 'q1a1') {
+            feedback.textContent = 'Correct! Phishing is a social engineering attack to steal sensitive information.';
+        } else {
+            feedback.textContent = 'Incorrect. Phishing is a social engineering attack to steal sensitive information.';
+        }
+    });
 
-    <script>
-        // Quiz 1: Injection Vulnerabilities
-        document.getElementById('quiz1').addEventListener('change', function() {
-            const selectedAnswer = document.querySelector('input[name="q1"]:checked').value;
-            const feedback = document.getElementById('quiz1-feedback');
-            if (selectedAnswer === 'q1a1') {
-                feedback.textContent = 'Correct! SQL Injection is an example of an injection vulnerability.';
-            } else {
-                feedback.textContent = 'Incorrect. SQL Injection is an example of an injection vulnerability.';
-            }
-        });
+    // Quiz 2: What is Encryption?
+    document.getElementById('quiz2').addEventListener('change', function() {
+        const selectedAnswer = document.querySelector('input[name="q2"]:checked').value;
+        const feedback = document.getElementById('quiz2-feedback');
+        if (selectedAnswer === 'q2a1') {
+            feedback.textContent = 'Correct! Encryption is the process of converting plaintext into ciphertext.';
+        } else {
+            feedback.textContent = 'Incorrect. Encryption is the process of converting plaintext into ciphertext.';
+        }
+    });
 
-        // Quiz 2: Password Attacks
-        document.getElementById('quiz2').addEventListener('change', function() {
-            const selectedAnswer = document.querySelector('input[name="q2"]:checked').value;
-            const feedback = document.getElementById('quiz2-feedback');
-            if (selectedAnswer === 'q2a3') {
-                feedback.textContent = 'Correct! Denial-of-Service (DoS) Attack is not a password attack.';
-            } else {
-                feedback.textContent = 'Incorrect. Denial-of-Service (DoS) Attack is not a password attack.';
-            }
-        });
+    // Quiz 3: What is Two-Factor Authentication (2FA)?
+    document.getElementById('quiz3').addEventListener('change', function() {
+        const selectedAnswer = document.querySelector('input[name="q3"]:checked').value;
+        const feedback = document.getElementById('quiz3-feedback');
+        if (selectedAnswer === 'q3a2') {
+            feedback.textContent = 'Correct! Two-Factor Authentication (2FA) uses two different authentication methods.';
+        } else {
+            feedback.textContent = 'Incorrect. Two-Factor Authentication (2FA) uses two different authentication methods.';
+        }
+    });
 
-        // Add event listeners and feedback for other quizzes as needed
+</script>
+
+
 
     </script>
 </body>
