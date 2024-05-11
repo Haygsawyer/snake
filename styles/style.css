@@ -51,7 +51,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  color: #000;
+  color: #FFFFFF;
   padding: 0rem 2rem;
 }
 
@@ -130,6 +130,7 @@ h1 {
 .instructions {
     font-size: 20px;
     margin-bottom: 30px;
+    text-align: left;
     color: #adbac7;
 }
 
